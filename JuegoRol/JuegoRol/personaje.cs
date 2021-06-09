@@ -47,22 +47,6 @@ namespace JuegoRol
         public int Nivel { get => nivel; set => nivel = value; }
         public int Armadura { get => armadura; set => armadura = value; }
 
-        public personaje crearPersonaje()
-        {
-            Random rand = new Random();
-            personaje nuevoPersonaje = new personaje();
-            nuevoPersonaje.edad = rand.Next(0, 300);
-            nuevoPersonaje.Velocidad = rand.Next(1, 11);
-            nuevoPersonaje.Destreza = rand.Next(1, 6);
-            nuevoPersonaje.Fuerza = rand.Next(1, 11);
-            nuevoPersonaje.Nivel = rand.Next(1, 11);
-            nuevoPersonaje.Armadura = rand.Next(1, 11);
-
-            switch (rand.Next(1, 5))
-            {
-
-            }
-
-        }
+        
     }
 }

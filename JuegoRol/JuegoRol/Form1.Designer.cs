@@ -32,15 +32,15 @@ namespace JuegoRol
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.Humano = new System.Windows.Forms.RadioButton();
+            this.Orco = new System.Windows.Forms.RadioButton();
+            this.Elfo = new System.Windows.Forms.RadioButton();
+            this.Hobbit = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.nombre = new System.Windows.Forms.TextBox();
+            this.apodo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.fecnaci = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label2
@@ -70,49 +70,47 @@ namespace JuegoRol
             this.label4.TabIndex = 2;
             this.label4.Text = "Tipo De Personaje";
             // 
-            // radioButton1
+            // Humano
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 191);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(65, 17);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Humano";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Humano.AutoSize = true;
+            this.Humano.Checked = true;
+            this.Humano.Location = new System.Drawing.Point(12, 191);
+            this.Humano.Name = "Humano";
+            this.Humano.Size = new System.Drawing.Size(65, 17);
+            this.Humano.TabIndex = 3;
+            this.Humano.TabStop = true;
+            this.Humano.Text = "Humano";
+            this.Humano.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // Orco
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(88, 191);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(48, 17);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Orco";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.Orco.AutoSize = true;
+            this.Orco.Location = new System.Drawing.Point(88, 191);
+            this.Orco.Name = "Orco";
+            this.Orco.Size = new System.Drawing.Size(48, 17);
+            this.Orco.TabIndex = 4;
+            this.Orco.Text = "Orco";
+            this.Orco.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // Elfo
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(153, 191);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(43, 17);
-            this.radioButton3.TabIndex = 5;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Elfo";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.Elfo.AutoSize = true;
+            this.Elfo.Location = new System.Drawing.Point(153, 191);
+            this.Elfo.Name = "Elfo";
+            this.Elfo.Size = new System.Drawing.Size(43, 17);
+            this.Elfo.TabIndex = 5;
+            this.Elfo.Text = "Elfo";
+            this.Elfo.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // Hobbit
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(216, 191);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(56, 17);
-            this.radioButton4.TabIndex = 6;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Hobbit";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.Hobbit.AutoSize = true;
+            this.Hobbit.Location = new System.Drawing.Point(216, 191);
+            this.Hobbit.Name = "Hobbit";
+            this.Hobbit.Size = new System.Drawing.Size(56, 17);
+            this.Hobbit.TabIndex = 6;
+            this.Hobbit.Text = "Hobbit";
+            this.Hobbit.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -124,19 +122,19 @@ namespace JuegoRol
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.click_crear);
             // 
-            // textBox1
+            // nombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(88, 38);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 8;
+            this.nombre.Location = new System.Drawing.Point(88, 38);
+            this.nombre.Name = "nombre";
+            this.nombre.Size = new System.Drawing.Size(100, 20);
+            this.nombre.TabIndex = 8;
             // 
-            // textBox2
+            // apodo
             // 
-            this.textBox2.Location = new System.Drawing.Point(88, 82);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 9;
+            this.apodo.Location = new System.Drawing.Point(88, 82);
+            this.apodo.Name = "apodo";
+            this.apodo.Size = new System.Drawing.Size(100, 20);
+            this.apodo.TabIndex = 9;
             // 
             // label5
             // 
@@ -147,25 +145,25 @@ namespace JuegoRol
             this.label5.TabIndex = 10;
             this.label5.Text = "Fecha de Nacimiento";
             // 
-            // dateTimePicker1
+            // fecnaci
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(49, 131);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 11;
+            this.fecnaci.Location = new System.Drawing.Point(49, 131);
+            this.fecnaci.Name = "fecnaci";
+            this.fecnaci.Size = new System.Drawing.Size(200, 20);
+            this.fecnaci.TabIndex = 11;
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(284, 261);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.fecnaci);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.apodo);
+            this.Controls.Add(this.nombre);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.Hobbit);
+            this.Controls.Add(this.Elfo);
+            this.Controls.Add(this.Orco);
+            this.Controls.Add(this.Humano);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -181,15 +179,15 @@ namespace JuegoRol
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton Humano;
+        private System.Windows.Forms.RadioButton Orco;
+        private System.Windows.Forms.RadioButton Elfo;
+        private System.Windows.Forms.RadioButton Hobbit;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox nombre;
+        private System.Windows.Forms.TextBox apodo;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker fecnaci;
     }
 }
 
