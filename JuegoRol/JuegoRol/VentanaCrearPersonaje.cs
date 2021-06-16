@@ -71,7 +71,8 @@ namespace JuegoRol
             }
             else
             {
-
+                VentanaPelea Pelea = new VentanaPelea(ListaDePersonajes);
+                Pelea.ShowDialog();
             }
         }
     }
