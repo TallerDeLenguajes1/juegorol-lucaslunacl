@@ -4,10 +4,10 @@ using System.Windows.Forms;
 
 namespace JuegoRol
 {
-    public partial class Form1 : Form
+    public partial class VentanaCrearPersonaje : Form
     {
-        private List<personaje> ListaDePersonajes = new List<personaje>();
-        public Form1()
+        private List<Personaje> ListaDePersonajes = new List<Personaje>();
+        public VentanaCrearPersonaje()
         {
             InitializeComponent();
         }
@@ -15,19 +15,19 @@ namespace JuegoRol
         private void click_crear(object sender, EventArgs e)
         {
 
-            personaje NuevoPesonaje = crearPersonaje();
+            Personaje NuevoPesonaje = crearPersonaje();
             agregarALista(NuevoPesonaje);
-            DialogResult dialogResult = MessageBox.Show(ListaDePersonajes, "Hola");
+            listbox_creados.Items.Add(Personaje.mostrarPersonaje(NuevoPesonaje));
         }
 
-        private void agregarALista(personaje NuevoPersonaje)
+        private void agregarALista(Personaje NuevoPersonaje)
         {
             ListaDePersonajes.Add(NuevoPersonaje);
         }
-        public personaje crearPersonaje()
+        public Personaje crearPersonaje()
         {
             Random rand = new Random();
-            personaje nuevoPersonaje = new personaje();
+            Personaje nuevoPersonaje = new Personaje();
             nuevoPersonaje.Edad = rand.Next(0, 300);
             nuevoPersonaje.Velocidad = rand.Next(1, 11);
             nuevoPersonaje.Destreza = rand.Next(1, 6);

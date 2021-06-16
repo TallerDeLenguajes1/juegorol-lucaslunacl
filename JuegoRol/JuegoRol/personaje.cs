@@ -7,9 +7,9 @@ namespace JuegoRol
         Orco,
         Elfo,
         Hobbit,
-        Humano,
+        Humano
     }
-    public class personaje
+    public class Personaje
     {
         // DATOS
         private TipoDePersonaje tipo;
@@ -29,7 +29,7 @@ namespace JuegoRol
 
         // METODO CONSTRUCTOR
 
-        public personaje()
+        public Personaje()
         {
             Salud = 100; //asigno a cada personaje creado salud 100 x defecto
 
@@ -47,6 +47,10 @@ namespace JuegoRol
         public int Nivel { get => nivel; set => nivel = value; }
         public int Armadura { get => armadura; set => armadura = value; }
 
-        
+        public static string  mostrarPersonaje(Personaje personaje)
+        {
+            string personajeDatos = "Nombre: " + personaje.Nombre + "Apodo: " + personaje.Apodo + "Tipo: " + personaje.Tipo;
+            return personajeDatos;
+        }
     }
 }

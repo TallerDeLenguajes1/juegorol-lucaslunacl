@@ -1,7 +1,7 @@
 ﻿
 namespace JuegoRol
 {
-    partial class Form1
+    partial class VentanaCrearPersonaje
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -41,6 +41,8 @@ namespace JuegoRol
             this.apodo = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.fecnaci = new System.Windows.Forms.DateTimePicker();
+            this.listbox_creados = new System.Windows.Forms.ListBox();
+            this.lbl_listapersonaje = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -152,9 +154,28 @@ namespace JuegoRol
             this.fecnaci.Size = new System.Drawing.Size(200, 20);
             this.fecnaci.TabIndex = 11;
             // 
+            // listbox_creados
+            // 
+            this.listbox_creados.FormattingEnabled = true;
+            this.listbox_creados.Location = new System.Drawing.Point(353, 38);
+            this.listbox_creados.Name = "listbox_creados";
+            this.listbox_creados.Size = new System.Drawing.Size(239, 147);
+            this.listbox_creados.TabIndex = 12;
+            // 
+            // lbl_listapersonaje
+            // 
+            this.lbl_listapersonaje.AutoSize = true;
+            this.lbl_listapersonaje.Location = new System.Drawing.Point(353, 13);
+            this.lbl_listapersonaje.Name = "lbl_listapersonaje";
+            this.lbl_listapersonaje.Size = new System.Drawing.Size(99, 13);
+            this.lbl_listapersonaje.TabIndex = 13;
+            this.lbl_listapersonaje.Text = "Lista de Personajes";
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(639, 261);
+            this.Controls.Add(this.lbl_listapersonaje);
+            this.Controls.Add(this.listbox_creados);
             this.Controls.Add(this.fecnaci);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.apodo);
@@ -188,6 +209,8 @@ namespace JuegoRol
         private System.Windows.Forms.TextBox apodo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker fecnaci;
+        private System.Windows.Forms.ListBox listbox_creados;
+        private System.Windows.Forms.Label lbl_listapersonaje;
     }
 }
 
