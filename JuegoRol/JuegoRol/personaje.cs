@@ -49,7 +49,7 @@ namespace JuegoRol
 
         public static string  mostrarPersonaje(Personaje personaje)
         {
-            string personajeDatos = "Nombre: " + personaje.Nombre + "Apodo: " + personaje.Apodo + "Tipo: " + personaje.Tipo;
+            string personajeDatos = "Nombre: " + personaje.Nombre + " Apodo: " + personaje.Apodo + " Tipo: " + personaje.Tipo;
             return personajeDatos;
         }
     }

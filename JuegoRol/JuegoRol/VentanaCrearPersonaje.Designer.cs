@@ -43,6 +43,7 @@ namespace JuegoRol
             this.fecnaci = new System.Windows.Forms.DateTimePicker();
             this.listbox_creados = new System.Windows.Forms.ListBox();
             this.lbl_listapersonaje = new System.Windows.Forms.Label();
+            this.btn_pelea = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label2
@@ -171,9 +172,20 @@ namespace JuegoRol
             this.lbl_listapersonaje.TabIndex = 13;
             this.lbl_listapersonaje.Text = "Lista de Personajes";
             // 
-            // Form1
+            // btn_pelea
+            // 
+            this.btn_pelea.Location = new System.Drawing.Point(383, 206);
+            this.btn_pelea.Name = "btn_pelea";
+            this.btn_pelea.Size = new System.Drawing.Size(173, 43);
+            this.btn_pelea.TabIndex = 14;
+            this.btn_pelea.Text = "Pelear";
+            this.btn_pelea.UseVisualStyleBackColor = true;
+            this.btn_pelea.Click += new System.EventHandler(this.btn_pelea_Click);
+            // 
+            // VentanaCrearPersonaje
             // 
             this.ClientSize = new System.Drawing.Size(639, 261);
+            this.Controls.Add(this.btn_pelea);
             this.Controls.Add(this.lbl_listapersonaje);
             this.Controls.Add(this.listbox_creados);
             this.Controls.Add(this.fecnaci);
@@ -188,7 +200,7 @@ namespace JuegoRol
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Name = "Form1";
+            this.Name = "VentanaCrearPersonaje";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -211,6 +223,7 @@ namespace JuegoRol
         private System.Windows.Forms.DateTimePicker fecnaci;
         private System.Windows.Forms.ListBox listbox_creados;
         private System.Windows.Forms.Label lbl_listapersonaje;
+        private System.Windows.Forms.Button btn_pelea;
     }
 }
 
