@@ -17,6 +17,7 @@ namespace JuegoRol
 
             personaje NuevoPesonaje = crearPersonaje();
             agregarALista(NuevoPesonaje);
+            DialogResult dialogResult = MessageBox.Show(ListaDePersonajes, "Hola");
         }
 
         private void agregarALista(personaje NuevoPersonaje)
@@ -48,9 +49,9 @@ namespace JuegoRol
                 nuevoPersonaje.Tipo = TipoDePersonaje.Elfo;
             }
 
-            personaje NuevaClaseDePersonaje = new personaje(nombre.Text, auxiliar, apodo.Text, fecnaci.Value);
-
+            //personaje NuevaClaseDePersonaje = new personaje(nombre.Text, auxiliar, apodo.Text, fecnaci.Value);
             return nuevoPersonaje;
         }
+        
     }
 }

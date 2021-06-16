@@ -3,3 +3,8 @@ C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol
 C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\obj\Debug\JuegoRol.Properties.Resources.resources
 C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\obj\Debug\JuegoRol.csproj.GenerateResource.cache
 C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\obj\Debug\JuegoRol.csproj.CoreCompileInputs.cache
+C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\bin\Debug\JuegoRol.exe.config
+C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\bin\Debug\JuegoRol.exe
+C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\bin\Debug\JuegoRol.pdb
+C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\obj\Debug\JuegoRol.exe
+C:\Users\Lucas\Desktop\PRACTICOS FACULTAD\segundo\Taller de Lenguajes 1\juegorol-lucaslunacl\JuegoRol\JuegoRol\obj\Debug\JuegoRol.pdb
