@@ -40,7 +40,7 @@ namespace JuegoRol
             lbl_NivelP1.Text = luchadores[player1].Nivel.ToString();
             lbl_DestrezaP1.Text = luchadores[player1].Destreza.ToString();
             lbl_ArmaduraP1.Text = luchadores[player1].Armadura.ToString();
-
+            
             // PLAYER 2
             lbl_nombreP2.Text = luchadores[player1].Nombre;
             lbl_SaludP2.Text = luchadores[player1].Salud.ToString();
@@ -82,7 +82,17 @@ namespace JuegoRol
         private void btn_atacar(object sender, EventArgs e)
         {
             Button boton = (Button)sender;
-
+            if (boton.Equals(btn_atacarP1))
+            {
+                btn_atacarP1.Enabled = false;
+                btn_atacarP2.Enabled = true;
+            }
+            else
+            {
+                btn_atacarP2.Enabled = false;
+                btn_atacarP1.Enabled = true;
+            }
+            /*
             switch (boton.Name)
             {
                 case "btn_atacarP1":
@@ -93,7 +103,7 @@ namespace JuegoRol
                     btn_atacarP2.Enabled = false;
                     btn_atacarP1.Enabled = true;
                     break;
-            }
+            }*/
             int danioProvocado = DanioDeAtaque(ListaDePeleadores, sender);
 
         }

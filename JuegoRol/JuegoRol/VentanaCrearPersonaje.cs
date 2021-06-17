@@ -18,9 +18,10 @@ namespace JuegoRol
             Personaje NuevoPesonaje = crearPersonaje(); // CREANDO UN NUEVO PERSONAJE
             agregarALista(NuevoPesonaje);
             listbox_creados.Items.Add(Personaje.mostrarPersonaje(NuevoPesonaje)); // MOSTRAR PERSONAJES EN LISTBOX
-            string datoCreado = "El personaje "+ NuevoPesonaje.Nombre + "fue agregado exitosamente";
+            string datoCreado = "El personaje "+ NuevoPesonaje.Nombre + "Fue agregado exitosamente";
             lbl_listapersonaje.Text= datoCreado;
             limpiarInput();
+            Console.Beep(); // sonido al agregar personaje
         }
         private void limpiarInput()
         {
