@@ -43,12 +43,12 @@ namespace JuegoRol
             
             // PLAYER 2
             lbl_nombreP2.Text = luchadores[player1].Nombre;
-            lbl_SaludP2.Text = luchadores[player1].Salud.ToString();
-            lbl_VelocidadP2.Text = luchadores[player1].Velocidad.ToString();
-            lbl_FuerzaP2.Text = luchadores[player1].Fuerza.ToString();
-            lbl_NivelP2.Text = luchadores[player1].Nivel.ToString();
-            lbl_DestrezaP2.Text = luchadores[player1].Destreza.ToString();
-            lbl_ArmaduraP2.Text = luchadores[player1].Armadura.ToString();
+            lbl_SaludP2.Text = "Salud: "+ luchadores[player1].Salud.ToString();
+            lbl_VelocidadP2.Text = "Velocidad: " +luchadores[player1].Velocidad.ToString();
+            lbl_FuerzaP2.Text = "Fuerza: " +luchadores[player1].Fuerza.ToString();
+            lbl_NivelP2.Text = "Nivel: " +luchadores[player1].Nivel.ToString();
+            lbl_DestrezaP2.Text = "Destreza: " +luchadores[player1].Destreza.ToString();
+            lbl_ArmaduraP2.Text = "Armadura: " +luchadores[player1].Armadura.ToString();
             btn_atacarP2.Enabled = false;
         }
 
@@ -165,7 +165,7 @@ namespace JuegoRol
             }
             else
             {
-                MessageBox.Show("¡" + Vencedor + " es el ganador", "Resultado de la Pelea");
+                MessageBox.Show("EL LUCHADOR " + Vencedor + " ES EL GANADOR", "Resultado de la Pelea");
             }
             ModificarPeleadores(Peleadores);
             this.Close();
