@@ -44,6 +44,7 @@ namespace JuegoRol
             this.listbox_creados = new System.Windows.Forms.ListBox();
             this.lbl_listapersonaje = new System.Windows.Forms.Label();
             this.btn_pelea = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -182,9 +183,19 @@ namespace JuegoRol
             this.btn_pelea.UseVisualStyleBackColor = true;
             this.btn_pelea.Click += new System.EventHandler(this.btn_pelea_Click);
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(224, 273);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(166, 13);
+            this.label6.TabIndex = 15;
+            this.label6.Text = "Clima en San Miguel de Tucumán";
+            // 
             // VentanaCrearPersonaje
             // 
-            this.ClientSize = new System.Drawing.Size(639, 261);
+            this.ClientSize = new System.Drawing.Size(639, 365);
+            this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_pelea);
             this.Controls.Add(this.lbl_listapersonaje);
             this.Controls.Add(this.listbox_creados);
@@ -224,6 +235,7 @@ namespace JuegoRol
         private System.Windows.Forms.ListBox listbox_creados;
         private System.Windows.Forms.Label lbl_listapersonaje;
         private System.Windows.Forms.Button btn_pelea;
+        private System.Windows.Forms.Label label6;
     }
 }
 

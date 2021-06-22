@@ -12,7 +12,7 @@ namespace JuegoRol
 {
     public partial class VentanaPelea : Form
     {
-        int player1, player2;
+        int player1, player2, cantAtaques;
         List<Personaje> ListaDePeleadores = new List<Personaje>();
         public VentanaPelea(List<Personaje> personajes)
         {
@@ -34,12 +34,12 @@ namespace JuegoRol
 
             // PLAYER 1
             lbl_nombreP1.Text = luchadores[player1].Nombre;
-            lbl_SaludP1.Text = luchadores[player1].Salud.ToString();
-            lbl_VelocidadP1.Text = luchadores[player1].Velocidad.ToString();
-            lbl_fuerzaP1.Text = luchadores[player1].Fuerza.ToString();
-            lbl_NivelP1.Text = luchadores[player1].Nivel.ToString();
-            lbl_DestrezaP1.Text = luchadores[player1].Destreza.ToString();
-            lbl_ArmaduraP1.Text = luchadores[player1].Armadura.ToString();
+            lbl_SaludP1.Text = "Salud: "+ luchadores[player1].Salud.ToString();
+            lbl_VelocidadP1.Text = "Velocidad: " +luchadores[player1].Velocidad.ToString();
+            lbl_fuerzaP1.Text = "Fuerza: " +luchadores[player1].Fuerza.ToString();
+            lbl_NivelP1.Text = "Nivel: "+luchadores[player1].Nivel.ToString();
+            lbl_DestrezaP1.Text = "Destreza: "+luchadores[player1].Destreza.ToString();
+            lbl_ArmaduraP1.Text = "Armadura: " +luchadores[player1].Armadura.ToString();
             
             // PLAYER 2
             lbl_nombreP2.Text = luchadores[player1].Nombre;
@@ -105,7 +105,83 @@ namespace JuegoRol
                     break;
             }*/
             int danioProvocado = DanioDeAtaque(ListaDePeleadores, sender);
-
+            ataque(ListaDePeleadores, danioProvocado, sender);
+        }
+        private void ataque(List<Personaje> Peleadores, int danio, object sender)
+        {
+            Button boton = (Button)sender;
+            if (boton.Equals(btn_atacarP1))
+            {
+                int nuevaSaludP2 = Peleadores[player2].Salud -= danio;
+                if (nuevaSaludP2 < 0)
+                { // Para que la vida no sea negativa
+                    lbl_SaludP2.Text = "0";
+                    Peleadores[player2].Salud = 0;
+                    mostrarGanador(Peleadores);
+                }
+                else
+                {
+                    lbl_SaludP2.Text = nuevaSaludP2.ToString();
+                }
+            }
+            else
+            {
+                cantAtaques++;
+                int nuevaSaludP1 = Peleadores[player1].Salud -= danio;
+                if (nuevaSaludP1 < 0)
+                { // Para que la vida no sea negativa
+                    lbl_SaludP1.Text = "0";
+                    Peleadores[player1].Salud = 0;
+                    mostrarGanador(Peleadores);
+                }
+                else
+                {
+                    lbl_SaludP1.Text = nuevaSaludP1.ToString();
+                }
+            }
+            if (cantAtaques >= 3)
+            {
+                mostrarGanador(Peleadores);
+            }
+        }
+        private void mostrarGanador(List<Personaje> Peleadores)
+        {
+            string Vencedor;
+            if (Peleadores[player1].Salud > Peleadores[player2].Salud)
+            {
+                Vencedor = Peleadores[player1].Nombre + " (" + Peleadores[player1].Tipo + ")";
+            }
+            else if (Peleadores[player1].Salud < Peleadores[player2].Salud)
+            {
+                Vencedor = Peleadores[player2].Nombre + " (" + Peleadores[player2].Tipo + ")";
+            }
+            else
+            {
+                Vencedor = "EMPATE";
+            }
+            if (Vencedor == "EMPATE")
+            {
+                MessageBox.Show("EMPATE!", "Pelea");
+            }
+            else
+            {
+                MessageBox.Show("¡" + Vencedor + " es el ganador", "Resultado de la Pelea");
+            }
+            ModificarPeleadores(Peleadores);
+            this.Close();
+        }
+        private void ModificarPeleadores(List<Personaje> Peleadores)
+        { // Elimina al perdedor y le bonifica un poco de vida, nivel y fuerza al ganador
+            if (Peleadores[player1].Salud > Peleadores[player2].Salud)
+            {
+                //Elminar al perdedor
+                Peleadores.RemoveAt(player2);
+            }
+            else if (Peleadores[player1].Salud < Peleadores[player2].Salud)
+            {
+                // eliminar perdedor
+                Peleadores.RemoveAt(player1);
+            }
         }
     }
 }
