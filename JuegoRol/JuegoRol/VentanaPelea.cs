@@ -36,7 +36,7 @@ namespace JuegoRol
                         using (StreamReader objReader = new StreamReader(strReader))
                         {
                             string responseBody = objReader.ReadToEnd();
-                            API ListClimas = JsonSerializer.Deserialize<List<API>>(responseBody);
+                            API ListClimas = JsonSerializer.Deserialize<API>(responseBody);
                             foreach (var clima in ListClimas)
                             {
                                 if (clima.Name == "San Miguel de Tucumán")

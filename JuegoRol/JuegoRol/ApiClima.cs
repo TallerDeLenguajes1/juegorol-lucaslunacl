@@ -12,7 +12,7 @@ namespace JuegoRol
     class ApiClima
     {
         // Root myDeserializedClass = JsonSerializer.Deserialize<Root>(myJsonResponse);
-        public class Weather
+        public class Clima
         {
             [JsonPropertyName("humidity")]
             public int Humidity { get; set; }
@@ -24,10 +24,10 @@ namespace JuegoRol
             public double? St { get; set; }
 
             [JsonPropertyName("visibility")]
-            public double Visibility { get; set; }
+            public float Visibility { get; set; }
 
             [JsonPropertyName("wind_speed")]
-            public int? WindSpeed { get; set; }
+            public object WindSpeed { get; set; }
 
             [JsonPropertyName("id")]
             public int Id { get; set; }
@@ -36,7 +36,7 @@ namespace JuegoRol
             public string Description { get; set; }
 
             [JsonPropertyName("temp")]
-            public double Temp { get; set; }
+            public float Temp { get; set; }
 
             [JsonPropertyName("wing_deg")]
             public string WingDeg { get; set; }
@@ -81,12 +81,12 @@ namespace JuegoRol
             public int Updated { get; set; }
 
             [JsonPropertyName("weather")]
-            public Weather Weather { get; set; }
+            public Clima Weather { get; set; }
 
             [JsonPropertyName("forecast")]
             public object Forecast { get; set; }
         }
 
-
+        
     }
 }
