@@ -1,6 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.Text.Json;
+using static JuegoRol.ApiClima;
+using System.Net;
+using System.IO;
 
 namespace JuegoRol
 {
@@ -10,6 +14,7 @@ namespace JuegoRol
         public VentanaCrearPersonaje()
         {
             InitializeComponent();
+            APIClima();
         }
 
         private void click_crear(object sender, EventArgs e)
@@ -27,6 +32,85 @@ namespace JuegoRol
         {
             nombre.Clear();
             apodo.Clear();
+        }
+        public void APIClima()
+        {
+            var url = $"https://ws.smn.gob.ar/map_items/weather";
+            var request = (HttpWebRequest)WebRequest.Create(url);
+            request.Method = "GET";
+            request.ContentType = "application/json";
+            request.Accept = "application/json";
+            try
+            {
+                using (WebResponse response = request.GetResponse())
+                {
+                    using (Stream strReader = response.GetResponseStream())
+                    {
+                        if (strReader == null) return;
+                        using (StreamReader objReader = new StreamReader(strReader))
+                        {
+                            string responseBody = objReader.ReadToEnd();
+                            List<API> listaDeClimas = JsonSerializer.Deserialize<List<API>>(responseBody);
+                            foreach (var clima in listaDeClimas)
+                            {
+                                if (clima.Name == "San Miguel de Tucumán")
+                                {
+                                    string climaDesc = clima.Weather.Description;
+                                    float tempClima = clima.Weather.Temp;
+                                    switch (Verificar(climaDesc))
+                                    {
+                                        case 1:
+                                            Clima_Temp.Text = tempClima.ToString() + " Grados";
+                                            Clima_desc.Text = climaDesc;
+                                            break;
+                                        case 2:
+                                            Clima_Temp.Text = tempClima.ToString() + " Grados";
+                                            Clima_desc.Text = climaDesc;
+                                            break;
+                                        case 3:
+                                            Clima_Temp.Text = tempClima.ToString() + " Grados";
+                                            Clima_desc.Text = climaDesc;
+                                            break;
+                                        case 4:
+                                            Clima_Temp.Text = tempClima.ToString() + " Grados";
+                                            Clima_desc.Text = climaDesc;
+                                            break;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            catch (WebException ex)
+            {
+                string error = ex.ToString();
+            }
+        }
+        public int Verificar(string descripcion)
+        {
+            string[] descClima = new string[14]
+            {
+               "Nublado", "Algo Nublado", "Algo nublado con bruma", "Algo nublado con humo", "Algo nublado con neblina"
+        , "Cubierto", "Cubierto con neblina", "Cubierto con humo", "Cubierto con ventisca baja", "Parcialmente nublado", "Parcialmente nublado con nevlina", "Parcialmente nublado con bruma", "Parcialmente nublado con humo", "Despejado"
+            };
+            if (descripcion == descClima[0] || descripcion == descClima[1] || descripcion == descClima[2] || descripcion == descClima[3] || descripcion == descClima[4])
+            {
+                return 1; 
+            }
+            else if (descripcion == descClima[5] || descripcion == descClima[6] || descripcion == descClima[7] || descripcion == descClima[8])
+            {
+                return 2; 
+            }
+            else if (descripcion == descClima[9] || descripcion == descClima[10] || descripcion == descClima[11] || descripcion == descClima[12])
+            {
+                return 3;
+            }
+            else if (descripcion == descClima[12])
+            {
+                return 4; 
+            }
+            return 0;
         }
         private void agregarALista(Personaje NuevoPersonaje)
         {

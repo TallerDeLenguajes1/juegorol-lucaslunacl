@@ -46,6 +46,9 @@ namespace JuegoRol
             this.lbl_ArmaduraP2 = new System.Windows.Forms.Label();
             this.btn_atacarP1 = new System.Windows.Forms.Button();
             this.btn_atacarP2 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Clima_Temp = new System.Windows.Forms.Label();
+            this.Clima_desc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_nombreP1
@@ -211,9 +214,42 @@ namespace JuegoRol
             this.btn_atacarP2.UseVisualStyleBackColor = true;
             this.btn_atacarP2.Click += new System.EventHandler(this.btn_atacar);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Sitka Text", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(246, 376);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 28);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Clima en SMT HOY";
+            // 
+            // Clima_Temp
+            // 
+            this.Clima_Temp.AutoSize = true;
+            this.Clima_Temp.Font = new System.Drawing.Font("News701 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clima_Temp.Location = new System.Drawing.Point(281, 424);
+            this.Clima_Temp.Name = "Clima_Temp";
+            this.Clima_Temp.Size = new System.Drawing.Size(121, 20);
+            this.Clima_Temp.TabIndex = 19;
+            this.Clima_Temp.Text = "Temperatura";
+            // 
+            // Clima_desc
+            // 
+            this.Clima_desc.AutoSize = true;
+            this.Clima_desc.Font = new System.Drawing.Font("News701 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clima_desc.Location = new System.Drawing.Point(252, 459);
+            this.Clima_desc.Name = "Clima_desc";
+            this.Clima_desc.Size = new System.Drawing.Size(161, 20);
+            this.Clima_desc.TabIndex = 20;
+            this.Clima_desc.Text = "Descripcion Clima";
+            // 
             // VentanaPelea
             // 
-            this.ClientSize = new System.Drawing.Size(689, 438);
+            this.ClientSize = new System.Drawing.Size(689, 525);
+            this.Controls.Add(this.Clima_desc);
+            this.Controls.Add(this.Clima_Temp);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_atacarP2);
             this.Controls.Add(this.btn_atacarP1);
             this.Controls.Add(this.lbl_ArmaduraP2);
@@ -232,6 +268,7 @@ namespace JuegoRol
             this.Controls.Add(this.lbl_nombreP2);
             this.Controls.Add(this.lbl_nombreP1);
             this.Name = "VentanaPelea";
+            this.Load += new System.EventHandler(this.VentanaPelea_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -256,5 +293,8 @@ namespace JuegoRol
         private System.Windows.Forms.Label lbl_ArmaduraP2;
         private System.Windows.Forms.Button btn_atacarP1;
         private System.Windows.Forms.Button btn_atacarP2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label Clima_Temp;
+        private System.Windows.Forms.Label Clima_desc;
     }
 }

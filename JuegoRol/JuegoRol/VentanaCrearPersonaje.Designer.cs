@@ -45,6 +45,8 @@ namespace JuegoRol
             this.lbl_listapersonaje = new System.Windows.Forms.Label();
             this.btn_pelea = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
+            this.Clima_Temp = new System.Windows.Forms.Label();
+            this.Clima_desc = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label2
@@ -186,15 +188,38 @@ namespace JuegoRol
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(224, 273);
+            this.label6.Font = new System.Drawing.Font("Sitka Text", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(212, 269);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(166, 13);
+            this.label6.Size = new System.Drawing.Size(152, 23);
             this.label6.TabIndex = 15;
-            this.label6.Text = "Clima en San Miguel de Tucumán";
+            this.label6.Text = "Clima en SMT HOY";
+            // 
+            // Clima_Temp
+            // 
+            this.Clima_Temp.AutoSize = true;
+            this.Clima_Temp.Font = new System.Drawing.Font("News701 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clima_Temp.Location = new System.Drawing.Point(231, 303);
+            this.Clima_Temp.Name = "Clima_Temp";
+            this.Clima_Temp.Size = new System.Drawing.Size(121, 20);
+            this.Clima_Temp.TabIndex = 20;
+            this.Clima_Temp.Text = "Temperatura";
+            // 
+            // Clima_desc
+            // 
+            this.Clima_desc.AutoSize = true;
+            this.Clima_desc.Font = new System.Drawing.Font("News701 BT", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clima_desc.Location = new System.Drawing.Point(212, 336);
+            this.Clima_desc.Name = "Clima_desc";
+            this.Clima_desc.Size = new System.Drawing.Size(161, 20);
+            this.Clima_desc.TabIndex = 21;
+            this.Clima_desc.Text = "Descripcion Clima";
             // 
             // VentanaCrearPersonaje
             // 
             this.ClientSize = new System.Drawing.Size(639, 365);
+            this.Controls.Add(this.Clima_desc);
+            this.Controls.Add(this.Clima_Temp);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btn_pelea);
             this.Controls.Add(this.lbl_listapersonaje);
@@ -236,6 +261,8 @@ namespace JuegoRol
         private System.Windows.Forms.Label lbl_listapersonaje;
         private System.Windows.Forms.Button btn_pelea;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Clima_Temp;
+        private System.Windows.Forms.Label Clima_desc;
     }
 }
 
